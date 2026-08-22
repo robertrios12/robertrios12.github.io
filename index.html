@@ -1,0 +1,895 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.1.8"><title>KineMotion | Somos el puente entre ti y tu cliente</title><meta name="description" content="Agencia de marketing digital ecuatoriana con proyección internacional. Construimos ecosistemas digitales que convierten marcas en comunidades."><!-- Fonts: Syne (display) + DM Sans (body) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index@_@astro.DNi1IAqg.css"></head> <body class="font-body bg-dark text-white antialiased overflow-x-hidden grain"> <!-- Custom Cursor --> <div class="cursor" aria-hidden="true"></div> <nav id="main-nav" class="nav fixed top-0 left-0 w-full h-[72px] flex justify-between items-center px-[5%] lg:px-[8%] z-[900]" aria-label="Navegación principal" data-astro-cid-rxxavq4o> <!-- Brand --> <a href="/" class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2" data-astro-cid-rxxavq4o> <img src="/favicon.svg" alt="KineMotion" class="nav-logo" width="54" height="54" data-astro-cid-rxxavq4o> </a> <!-- Desktop Links --> <div class="hidden lg:flex items-center gap-10 font-body text-sm font-medium z-[901]" data-astro-cid-rxxavq4o> <a href="#services" class="nav-link hover-trigger text-white/70 hover:text-white transition-colors duration-300" data-astro-cid-rxxavq4o> <span data-es="Servicios" data-en="Services" data-astro-cid-rxxavq4o>Servicios</span> </a> <a href="#work" class="nav-link hover-trigger text-white/70 hover:text-white transition-colors duration-300" data-astro-cid-rxxavq4o> <span data-es="Trabajo" data-en="Work" data-astro-cid-rxxavq4o>Trabajo</span> </a> <a href="#about" class="nav-link hover-trigger text-white/70 hover:text-white transition-colors duration-300" data-astro-cid-rxxavq4o> <span data-es="Nosotros" data-en="About" data-astro-cid-rxxavq4o>Nosotros</span> </a> </div> <!-- Right Controls --> <div class="flex items-center gap-6 z-[901]" data-astro-cid-rxxavq4o> <!-- Language toggle --> <button class="lang-toggle bg-transparent border-none cursor-pointer font-body font-medium text-xs tracking-widest uppercase flex items-center gap-1.5 hover-trigger" aria-label="Cambiar idioma" data-astro-cid-rxxavq4o> <span class="lang-opt text-white/40 hover:text-white transition-colors duration-200 cursor-pointer" data-lang="es" data-astro-cid-rxxavq4o>ES</span> <span class="text-white/20" data-astro-cid-rxxavq4o>/</span> <span class="lang-opt text-white/40 hover:text-white transition-colors duration-200 cursor-pointer" data-lang="en" data-astro-cid-rxxavq4o>EN</span> </button> <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2 border border-white/20 text-white/80 hover:border-teal hover:text-teal font-body text-xs font-medium uppercase tracking-widest transition-all duration-300 hover-trigger" data-astro-cid-rxxavq4o> <span data-es="Hablemos" data-en="Let's Talk" data-astro-cid-rxxavq4o>Hablemos</span> </a> <!-- Hamburger --> <button class="hamburger flex lg:hidden flex-col justify-center items-end gap-[5px] w-7 h-7 bg-transparent border-none cursor-none z-[901] hover-trigger" aria-label="Menú" aria-expanded="false" data-astro-cid-rxxavq4o> <span class="block w-full h-[1px] bg-white transition-all duration-300 origin-right" data-astro-cid-rxxavq4o></span> <span class="block w-2/3 h-[1px] bg-white transition-all duration-300 origin-right" data-astro-cid-rxxavq4o></span> </button> </div> </nav> <!-- Mobile Overlay --> <div class="mobile-menu-overlay fixed inset-0 bg-dark/96 backdrop-blur-xl z-[800] flex flex-col justify-center items-center gap-10 opacity-0 pointer-events-none transition-all duration-500" role="dialog" aria-modal="true" aria-hidden="true" data-astro-cid-rxxavq4o> <a href="#services" class="font-display text-5xl font-bold text-white hover:text-teal transition-colors duration-300 hover-trigger" data-astro-cid-rxxavq4o> <span data-es="Servicios" data-en="Services" data-astro-cid-rxxavq4o>Servicios</span> </a> <a href="#work" class="font-display text-5xl font-bold text-white hover:text-teal transition-colors duration-300 hover-trigger" data-astro-cid-rxxavq4o> <span data-es="Trabajo" data-en="Work" data-astro-cid-rxxavq4o>Trabajo</span> </a> <a href="#about" class="font-display text-5xl font-bold text-white hover:text-teal transition-colors duration-300 hover-trigger" data-astro-cid-rxxavq4o> <span data-es="Nosotros" data-en="About" data-astro-cid-rxxavq4o>Nosotros</span> </a> <a href="#contact" class="font-display text-4xl font-bold text-teal mt-4 hover-trigger" data-astro-cid-rxxavq4o> <span data-es="Hablemos" data-en="Let's Talk" data-astro-cid-rxxavq4o>Hablemos</span> </a> </div>  <script>
+    /* Scroll state for nav background */
+    document.addEventListener("DOMContentLoaded", function () {
+        var nav = document.getElementById("main-nav");
+        if (!nav) return;
+
+        var ticking = false;
+        window.addEventListener(
+            "scroll",
+            function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        nav.classList.toggle("scrolled", window.scrollY > 60);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            },
+            { passive: true },
+        );
+    });
+
+    /* Listen for hero:complete to reveal nav */
+    window.addEventListener(
+        "hero:complete",
+        function () {
+            var nav = document.getElementById("main-nav");
+            if (!nav || typeof gsap === "undefined") return;
+            gsap.to(nav, {
+                y: 0,
+                opacity: 1,
+                duration: 0.7,
+                ease: "power3.out",
+            });
+        },
+        { once: true },
+    );
+</script> <main>  <!-- ════════════════════════════════════════════════════════════════════════
+     CORTINA — panel negro que se revela. z-50.
+     ════════════════════════════════════════════════════════════════════════ --><div id="hero-curtain" aria-hidden="true" data-astro-cid-bbe6dxrz></div> <!-- ════════════════════════════════════════════════════════════════════════
+     HERO — 100dvh, puro impacto visual. Sin scroll interno.
+     ════════════════════════════════════════════════════════════════════════ --> <section id="hero" aria-label="KineMotion — Agencia de marketing digital" data-astro-cid-bbe6dxrz> <!-- Stack de fotos --> <div id="hero-slideshow" aria-hidden="true" data-astro-cid-bbe6dxrz> <div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-001.DqV-YIde_HJdVt.webp" alt loading="eager" decoding="sync" fetchpriority="high" data-astro-cid-bbe6dxrz="true" width="6192" height="4128"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-002.nZ7qB8wZ_24WXDa.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="6000" height="4000"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-003.D1jJPBgj_Z1enoBN.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="6192" height="4128"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-004.C5PYXEql_Z1lEfxo.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="7008" height="4672"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-005.haJsyUT3_13UEEn.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="6192" height="4128"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-006.B5Y9Sgvs_Z1IIRkz.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="6000" height="4000"> </div><div class="hero-slide" data-astro-cid-bbe6dxrz> <img src="/_astro/brand-007.CoTLpYnv_2keKSz.webp" alt loading="lazy" decoding="async" data-astro-cid-bbe6dxrz="true" width="2048" height="1365"> </div> </div> <!-- Gradientes cinematográficos --> <div id="hero-vignette" aria-hidden="true" data-astro-cid-bbe6dxrz></div> <!-- Contenido inferior --> <div id="hero-bottom" data-astro-cid-bbe6dxrz> <div id="hero-tagline" data-astro-cid-bbe6dxrz> <span data-es="Somos tus aliados estratégicos" data-en="We are your strategic allies" class="text-5xl" data-astro-cid-bbe6dxrz>Somos tus aliados estratégicos.</span> </div> <div id="hero-meta" data-astro-cid-bbe6dxrz> <span class="hero-location" data-astro-cid-bbe6dxrz>Ecuador · Internacional</span> <div id="slide-progress" data-astro-cid-bbe6dxrz> <span id="slide-counter" data-astro-cid-bbe6dxrz>01 / 07</span> <div class="progress-track" data-astro-cid-bbe6dxrz> <div class="progress-fill" data-astro-cid-bbe6dxrz></div> </div> </div> </div> </div> <!-- SR only --> <p class="sr-only" data-astro-cid-bbe6dxrz>
+KineMotion — Agencia de marketing digital ecuatoriana con proyección
+    internacional.
+</p> </section> <!-- ════════════════════════════════════════════════════════════════════════
+     ESTILOS
+     ════════════════════════════════════════════════════════════════════════ -->  <!-- ════════════════════════════════════════════════════════════════════════
+     SCRIPT
+     ════════════════════════════════════════════════════════════════════════ --> <script>
+  // window.load garantiza que todos los scripts CDN (GSAP, CustomEase, etc.)
+  // ya terminaron de cargar y ejecutarse antes de correr la animación.
+  window.addEventListener("load", function () {
+    /* Fallback: si GSAP no cargó (CDN caído), mostrar sin animación */
+    if (typeof gsap === "undefined") {
+      var c = document.getElementById("hero-curtain");
+      if (c) c.style.display = "none";
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      window.dispatchEvent(new CustomEvent("hero:complete"));
+      return;
+    }
+
+    /* ── Bloquear scroll ─────────────────────────────────────── */
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+
+    /* ── Elementos ───────────────────────────────────────────── */
+    var curtain = document.getElementById("hero-curtain");
+    var bottom = document.getElementById("hero-bottom");
+    var slideEls = Array.from(document.querySelectorAll(".hero-slide"));
+    var totalSlides = slideEls.length;
+    var currentSlide = 0;
+
+    if (!curtain || slideEls.length === 0) return;
+
+    /* ── CustomEase ──────────────────────────────────────────── */
+    if (typeof CustomEase !== "undefined") {
+      CustomEase.create("curtainEase", "M0,0 C0.22,1 0.36,1 1,1");
+    }
+
+    /* ── Slideshow helpers ───────────────────────────────────── */
+    function updateCounter(index) {
+      var counter = document.getElementById("slide-counter");
+      if (!counter) return;
+      counter.textContent =
+        String(index + 1).padStart(2, "0") +
+        " / " +
+        String(totalSlides).padStart(2, "0");
+    }
+
+    function animateProgressBar() {
+      var fill = document.querySelector(".progress-fill");
+      if (!fill) return;
+      gsap.fromTo(
+        fill,
+        { scaleX: 0, transformOrigin: "left" },
+        { scaleX: 1, duration: 4, ease: "none", force3D: true },
+      );
+    }
+
+    function goToSlide(nextIndex) {
+      var prev = slideEls[currentSlide];
+      var next = slideEls[nextIndex];
+
+      next.style.visibility = "visible";
+      next.style.zIndex = 2;
+      gsap.set(next, { x: "100%", force3D: true });
+
+      gsap.to(next, {
+        x: "0%",
+        duration: 2,
+        ease: "power3.inOut",
+        force3D: true,
+        onComplete: function () {
+          prev.style.visibility = "hidden";
+          prev.style.zIndex = 0;
+          gsap.set(prev, { x: "100%", force3D: true });
+          next.style.zIndex = 1;
+          next.classList.add("active");
+          prev.classList.remove("active");
+          currentSlide = nextIndex;
+        },
+      });
+
+      updateCounter(nextIndex);
+      animateProgressBar();
+    }
+
+    function startSlideshow() {
+      slideEls.forEach(function (s) {
+        s.style.visibility = "hidden";
+        gsap.set(s, { x: "100%", force3D: true });
+      });
+      slideEls[0].style.visibility = "visible";
+      slideEls[0].style.zIndex = 1;
+      slideEls[0].classList.add("active");
+      gsap.set(slideEls[0], { x: "0%", force3D: true });
+      updateCounter(0);
+      animateProgressBar();
+      setInterval(function () {
+        goToSlide((currentSlide + 1) % totalSlides);
+      }, 4000);
+    }
+
+    /* ── Reduced motion ──────────────────────────────────────── */
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      curtain.style.display = "none";
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      gsap.set(bottom, { opacity: 1, y: 0 });
+      window.dispatchEvent(new CustomEvent("hero:complete"));
+      startSlideshow();
+      return;
+    }
+
+    /* ── Timeline de entrada ──────────────────────────────────── */
+    var tl = gsap.timeline({ defaults: { force3D: true } });
+
+    // Cortina se revela deslizándose hacia arriba
+    tl.to(curtain, {
+      yPercent: -100,
+      duration: 1.2,
+      ease: typeof CustomEase !== "undefined" ? "curtainEase" : "power3.inOut",
+    });
+
+    // Retirar cortina del DOM
+    tl.add(function () {
+      curtain.style.display = "none";
+    });
+
+    // Desbloquear scroll + avisar al nav
+    tl.add(function () {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      window.dispatchEvent(new CustomEvent("hero:complete"));
+    }, "-=0.3");
+
+    // Bottom content aparece
+    tl.to(
+      bottom,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.4",
+    );
+
+    // Arrancar slideshow
+    tl.add(function () {
+      startSlideshow();
+    });
+  });
+</script> <section id="about" class="manifesto-section" data-astro-cid-5x6ves3f> <div class="manifesto-inner" data-astro-cid-5x6ves3f> <p class="manifesto-label" data-astro-cid-5x6ves3f> <span data-es="Lo que creemos" data-en="What we believe" data-astro-cid-5x6ves3f>Lo que creemos</span> </p> <h2 class="manifesto-text" id="manifesto-heading" data-astro-cid-5x6ves3f> <span data-es="No hacemos campañas aisladas. Construimos la infraestructura digital que tu marca necesita para crecer de Ecuador al mundo." data-en="We don't run isolated campaigns. We build the digital infrastructure your brand needs to scale from Ecuador to the world." data-astro-cid-5x6ves3f>No hacemos campañas aisladas. Construimos la infraestructura digital que tu marca necesita para crecer de Ecuador al mundo.</span> </h2> <div class="manifesto-footer" data-astro-cid-5x6ves3f> <div class="manifesto-rule" data-astro-cid-5x6ves3f></div> <p class="manifesto-sub" data-astro-cid-5x6ves3f> <span data-es="Nos alejamos del ruido para enfocarnos en estrategias con propósito. Entendemos tu marca, medimos cada clic y adaptamos rápido para maximizar tu impacto." data-en="We step away from the noise to focus on purposeful strategies. We understand your brand, measure every click, and adapt quickly to maximize your impact." data-astro-cid-5x6ves3f>Nos alejamos del ruido para enfocarnos en estrategias con propósito. Entendemos tu marca, medimos cada clic y adaptamos rápido para maximizar tu impacto.</span> </p> </div> </div> </section>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    var heading = document.getElementById('manifesto-heading');
+    var footer = document.querySelector('.manifesto-footer');
+    if (!heading) return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', function () {
+      /* Split text into words manually (no SplitType dependency for this section) */
+      var originalHTML = heading.innerHTML;
+      var span = heading.querySelector('span[data-es]');
+      if (!span) return;
+
+      var text = span.textContent;
+      var words = text.split(/\s+/);
+      span.innerHTML = words.map(function (w) {
+        return '<span class="word">' + w + '</span>';
+      }).join(' ');
+
+      /* Animate words opacity from 0.12 → 1 as user scrolls */
+      var wordEls = heading.querySelectorAll('.word');
+
+      gsap.to(wordEls, {
+        opacity: 1,
+        stagger: 0.06,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heading,
+          start: 'top 75%',
+          end: 'bottom 40%',
+          scrub: 1.5,
+        },
+      });
+
+      /* Footer reveal */
+      if (footer) {
+        gsap.to(footer, {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power3.out',
+          force3D: true,
+          scrollTrigger: {
+            trigger: footer,
+            start: 'top 85%',
+            once: true,
+          },
+        });
+      }
+    });
+
+    /* Reduced motion: show everything immediately */
+    mm.add('(prefers-reduced-motion: reduce)', function () {
+      var wordEls = heading.querySelectorAll('.word');
+      wordEls.forEach(function (w) { w.style.opacity = '1'; });
+      if (footer) {
+        footer.style.opacity = '1';
+        footer.style.transform = 'none';
+      }
+    });
+  });
+</script> <section id="services" class="services-section" data-astro-cid-bp4bfslc> <div class="services-wrap" data-astro-cid-bp4bfslc> <!-- Header --> <div class="services-header" data-reveal data-astro-cid-bp4bfslc> <div data-astro-cid-bp4bfslc> <p class="section-label" data-astro-cid-bp4bfslc> <span data-es="Qué hacemos" data-en="What we do" data-astro-cid-bp4bfslc>Qué hacemos</span> </p> <h2 class="section-title" data-astro-cid-bp4bfslc> <span data-es="Servicios" data-en="Services" data-astro-cid-bp4bfslc>Servicios</span> </h2> </div> <p class="section-aside" data-astro-cid-bp4bfslc> <span data-es="08 disciplinas para construir tu ecosistema digital completo." data-en="08 disciplines to build your complete digital ecosystem." data-astro-cid-bp4bfslc>08 disciplinas para construir tu ecosistema digital completo.</span> </p> </div> <!-- Services list --> <ul class="services-list" role="list" data-astro-cid-bp4bfslc> <li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>01</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Proyectos Internacionales" data-en="International Projects" data-astro-cid-bp4bfslc> Proyectos Internacionales </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Experiencia en proyectos globales con embajadas y organizaciones internacionales." data-en="Experience in global projects with embassies and international organizations." data-astro-cid-bp4bfslc> Experiencia en proyectos globales con embajadas y organizaciones internacionales. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Projects</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>02</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Articulación de Ecosistemas Digitales para marcas" data-en="Ecosystem Articulation for brands" data-astro-cid-bp4bfslc> Articulación de Ecosistemas Digitales para marcas </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Estrategias integrales que fortalecen la presencia digital y conectan con la audiencia." data-en="Integrated strategies that strengthen digital presence and connect with the audience." data-astro-cid-bp4bfslc> Estrategias integrales que fortalecen la presencia digital y conectan con la audiencia. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Creative</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>03</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Networking e Innovación" data-en="Networking and Innovation" data-astro-cid-bp4bfslc> Networking e Innovación </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Conexiones estratégicas para potenciar tu crecimiento." data-en="Strategic connections to boost your growth." data-astro-cid-bp4bfslc> Conexiones estratégicas para potenciar tu crecimiento. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Networking</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>04</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Marketing Digital" data-en="Digital Marketing" data-astro-cid-bp4bfslc> Marketing Digital </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Potenciamos marcas a través de estrategias digitales innovadoras y personalizadas." data-en="We empower brands through innovative and personalized digital strategies." data-astro-cid-bp4bfslc> Potenciamos marcas a través de estrategias digitales innovadoras y personalizadas. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Marketing</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>05</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Social Media" data-en="Social Media" data-astro-cid-bp4bfslc> Social Media </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Estrategia de contenido que construye comunidad real." data-en="Content strategy that builds a real community." data-astro-cid-bp4bfslc> Estrategia de contenido que construye comunidad real. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Content</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>06</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Redes Sociales" data-en="Social Networks" data-astro-cid-bp4bfslc> Redes Sociales </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Gestión diaria, crecimiento orgánico y engagement." data-en="Daily management, organic growth, and engagement." data-astro-cid-bp4bfslc> Gestión diaria, crecimiento orgánico y engagement. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Growth</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>07</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Anuncios Pagados" data-en="Paid Ads" data-astro-cid-bp4bfslc> Anuncios Pagados </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Performance marketing con Meta Pixel y ROI medible." data-en="Performance marketing with Meta Pixel and measurable ROI." data-astro-cid-bp4bfslc> Performance marketing con Meta Pixel y ROI medible. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Performance</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li><li class="service-row group" data-reveal data-astro-cid-bp4bfslc> <div class="service-inner" data-astro-cid-bp4bfslc> <span class="service-num" data-astro-cid-bp4bfslc>08</span> <span class="service-name" data-astro-cid-bp4bfslc> <span data-es="Capacitación" data-en="Training" data-astro-cid-bp4bfslc> Capacitación </span> </span> <span class="service-desc" data-astro-cid-bp4bfslc> <span data-es="Formación en marketing y comunicación digital para equipos." data-en="Digital marketing and communication training for teams." data-astro-cid-bp4bfslc> Formación en marketing y comunicación digital para equipos. </span> </span> <span class="service-tag" data-astro-cid-bp4bfslc>Education</span> <span class="service-arrow" aria-hidden="true" data-astro-cid-bp4bfslc>
+→
+</span> </div> </li> </ul> </div> </section>  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+      return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", function () {
+      var header = document.querySelector(".services-header");
+      var rows = document.querySelectorAll(".service-row");
+
+      if (!header || !rows.length) return;
+
+      /* Header reveal */
+      gsap.from(header, {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        force3D: true,
+        scrollTrigger: { trigger: header, start: "top 85%", once: true },
+      });
+
+      /* Rows: stagger clip from bottom with slight x offset */
+      rows.forEach(function (row, i) {
+        gsap.from(row, {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: row, start: "top 92%", once: true },
+          delay: i * 0.03,
+        });
+      });
+    });
+  });
+</script> <section class="positioning-section" data-astro-cid-h356a4je> <div class="pos-wrap" data-astro-cid-h356a4je> <!-- Visual block --> <div class="pos-visual" data-reveal data-astro-cid-h356a4je> <div class="pos-overlay" data-astro-cid-h356a4je></div> <video autoplay loop muted playsinline class="pos-video" src="/_astro/2.C7YY0viJ.mp4" data-astro-cid-h356a4je></video> </div> <!-- Text block --> <div class="pos-text" data-reveal data-astro-cid-h356a4je> <div class="pos-label" data-astro-cid-h356a4je> <span data-es="Nuestra Agencia" data-en="Our Agency" data-astro-cid-h356a4je>Nuestra Agencia</span> </div> <h2 class="pos-heading" data-astro-cid-h356a4je> <span data-es="Somos el puente entre tu visión y tu comunidad." data-en="We are the bridge between your vision and your community." data-astro-cid-h356a4je>Somos el puente entre tu visión y tu comunidad.</span> </h2> <p class="pos-body" data-astro-cid-h356a4je> <span data-es="Como agencia de marketing y comunicación digital, no solo publicamos contenido; estructuramos marcas para que se conviertan en ecosistemas confiables y seguros. Pensamos localmente y ejecutamos globalmente." data-en="As a digital marketing and communication agency, we don't just post content; we structure brands so they become reliable and safe ecosystems. We think locally and execute globally." data-astro-cid-h356a4je>Como agencia de marketing y comunicación digital, no solo publicamos
+          contenido; estructuramos marcas para que se conviertan en ecosistemas
+          confiables y seguros. Pensamos localmente y ejecutamos globalmente.</span> </p> <a href="#services" class="pos-link hover-trigger" data-astro-cid-h356a4je> <span data-es="Descubrir Servicios" data-en="Discover Services" data-astro-cid-h356a4je>Descubrir Servicios</span> <div class="pos-link-line" data-astro-cid-h356a4je></div> </a> </div> </div> </section>  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+      return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", function () {
+      var visual = document.querySelector(".pos-visual");
+      var text = document.querySelector(".pos-text");
+
+      if (visual) {
+        gsap.from(visual, {
+          y: 80,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: visual, start: "top 85%", once: true },
+        });
+
+        /* Parallax on video */
+        var video = visual.querySelector(".pos-video");
+        if (video) {
+          gsap.to(video, {
+            yPercent: -10,
+            ease: "none",
+            scrollTrigger: {
+              trigger: visual,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          });
+        }
+      }
+
+      if (text) {
+        gsap.from(text, {
+          y: 60,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          force3D: true,
+          delay: 0.2,
+          scrollTrigger: { trigger: text, start: "top 85%", once: true },
+        });
+      }
+    });
+  });
+</script> <section id="work" class="work-section" data-astro-cid-uymglut7> <div class="work-wrap" data-astro-cid-uymglut7> <div class="work-header" data-reveal data-astro-cid-uymglut7> <div data-astro-cid-uymglut7> <p class="section-label" data-astro-cid-uymglut7> <span data-es="Casos de éxito" data-en="Case Studies" data-astro-cid-uymglut7>Casos de éxito</span> </p> <h2 class="section-title" data-astro-cid-uymglut7> <span data-es="Trabajo Destacado" data-en="Selected Work" data-astro-cid-uymglut7>Trabajo Destacado</span> </h2> </div> <a href="#contact" class="work-cta hover-trigger" data-astro-cid-uymglut7> <span data-es="Agendar llamada" data-en="Book a call" data-astro-cid-uymglut7>Agendar llamada</span> <span data-astro-cid-uymglut7>→</span> </a> </div> <div class="work-projects" data-astro-cid-uymglut7> <article class="project-card" data-index="0" aria-label="Embajada de EEUU en Ecuador" data-astro-cid-uymglut7> <div class="project-image" data-astro-cid-uymglut7> <div class="project-img-inner" data-astro-cid-uymglut7> <img src="/_astro/project-001.D0o7ywoG_1YMs5A.webp" alt="Embajada de EEUU en Ecuador" loading="lazy" decoding="async" data-astro-cid-uymglut7="true" width="2048" height="1365"> </div> </div> <div class="project-info" data-astro-cid-uymglut7> <div class="project-info-left" data-astro-cid-uymglut7> <h3 class="project-name" data-astro-cid-uymglut7>Embajada de EEUU en Ecuador</h3> <div class="project-tags" data-astro-cid-uymglut7> <span class="project-tag" data-es="Evento" data-en="Event" data-astro-cid-uymglut7> Evento </span><span class="project-tag" data-es="Relaciones Internacionales" data-en="International Relations" data-astro-cid-uymglut7> Relaciones Internacionales </span> </div> </div> <div class="project-info-right" data-astro-cid-uymglut7> <div class="project-stat" data-astro-cid-uymglut7>+415</div> <p class="project-stat-label" data-astro-cid-uymglut7> <span data-es="Participantes internacionales de 7 países" data-en="International participants from 7 countries" data-astro-cid-uymglut7> Participantes internacionales de 7 países </span> </p> <p class="project-year" data-astro-cid-uymglut7>2024 - 2026</p> </div> </div> </article><article class="project-card" data-index="1" aria-label="Vancouver Latin American Film Festival" data-astro-cid-uymglut7> <div class="project-image" data-astro-cid-uymglut7> <div class="project-img-inner" data-astro-cid-uymglut7> <img src="/_astro/project-002.D_y0reIQ_Z1vh0QJ.webp" alt="Vancouver Latin American Film Festival" loading="lazy" decoding="async" data-astro-cid-uymglut7="true" width="2560" height="1920"> </div> </div> <div class="project-info" data-astro-cid-uymglut7> <div class="project-info-left" data-astro-cid-uymglut7> <h3 class="project-name" data-astro-cid-uymglut7>Vancouver Latin American Film Festival</h3> <div class="project-tags" data-astro-cid-uymglut7> <span class="project-tag" data-es="Social Media" data-en="Social Media" data-astro-cid-uymglut7> Social Media </span><span class="project-tag" data-es="Performance" data-en="Performance" data-astro-cid-uymglut7> Performance </span> </div> </div> <div class="project-info-right" data-astro-cid-uymglut7> <div class="project-stat" data-astro-cid-uymglut7>100K+</div> <p class="project-stat-label" data-astro-cid-uymglut7> <span data-es="Personas alcanzadas en 13 países" data-en="People reached in 13 countries" data-astro-cid-uymglut7> Personas alcanzadas en 13 países </span> </p> <p class="project-year" data-astro-cid-uymglut7>2020 - 2026</p> </div> </div> </article><article class="project-card" data-index="2" aria-label="Thunderbird Space Global Leadership Program" data-astro-cid-uymglut7> <div class="project-image" data-astro-cid-uymglut7> <div class="project-img-inner" data-astro-cid-uymglut7> <img src="/_astro/project-003.Bt8G9PPO_Z1m4T8x.webp" alt="Thunderbird Space Global Leadership Program" loading="lazy" decoding="async" data-astro-cid-uymglut7="true" width="4608" height="3072"> </div> </div> <div class="project-info" data-astro-cid-uymglut7> <div class="project-info-left" data-astro-cid-uymglut7> <h3 class="project-name" data-astro-cid-uymglut7>Thunderbird Space Global Leadership Program</h3> <div class="project-tags" data-astro-cid-uymglut7> <span class="project-tag" data-es="Relaciones Públicas" data-en="Public Relations" data-astro-cid-uymglut7> Relaciones Públicas </span><span class="project-tag" data-es="Gerencia" data-en="Management" data-astro-cid-uymglut7> Gerencia </span> </div> </div> <div class="project-info-right" data-astro-cid-uymglut7> <div class="project-stat" data-astro-cid-uymglut7>40</div> <p class="project-stat-label" data-astro-cid-uymglut7> <span data-es="Profesionales de alto nivel" data-en="High-level professionals" data-astro-cid-uymglut7> Profesionales de alto nivel </span> </p> <p class="project-year" data-astro-cid-uymglut7>2026</p> </div> </div> </article> </div> </div> </section>  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+      return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", function () {
+      /* Header */
+      gsap.from(".work-header", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        force3D: true,
+        scrollTrigger: {
+          trigger: ".work-header",
+          start: "top 85%",
+          once: true,
+        },
+      });
+
+      /* Cards with parallax image */
+      document.querySelectorAll(".project-card").forEach(function (card) {
+        var img = card.querySelector(".project-image");
+        var info = card.querySelector(".project-info");
+
+        if (img) {
+          gsap.from(img, {
+            y: 80,
+            opacity: 0,
+            duration: 1.1,
+            ease: "power3.out",
+            force3D: true,
+            scrollTrigger: { trigger: card, start: "top 85%", once: true },
+          });
+
+          /* Parallax on image inner */
+          var imgInner = card.querySelector(".project-img-inner");
+          if (imgInner) {
+            gsap.to(imgInner, {
+              yPercent: -8,
+              ease: "none",
+              scrollTrigger: {
+                trigger: card,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+              },
+            });
+          }
+        }
+
+        if (info) {
+          gsap.from(info, {
+            y: 40,
+            opacity: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            force3D: true,
+            delay: 0.15,
+            scrollTrigger: { trigger: card, start: "top 80%", once: true },
+          });
+        }
+      });
+    });
+  });
+</script> <section id="methodology" class="methodology-section" data-astro-cid-jevcpw3s> <div class="method-wrap" data-astro-cid-jevcpw3s> <div class="method-header" data-reveal data-astro-cid-jevcpw3s> <p class="section-label" data-astro-cid-jevcpw3s> <span data-es="Cómo trabajamos" data-en="How we work" data-astro-cid-jevcpw3s>Cómo trabajamos</span> </p> <h2 class="section-title" data-astro-cid-jevcpw3s> <span data-es="Metodología para la construcción de ecosistemas digitales" data-en="Methodology for building digital ecosystems" data-astro-cid-jevcpw3s>
+Metodología para la construcción de ecosistemas digitales
+</span> </h2> </div> <div class="method-steps" data-astro-cid-jevcpw3s> <div class="method-step group" data-reveal data-astro-cid-jevcpw3s> <div class="method-step-inner" data-astro-cid-jevcpw3s> <div class="method-step-left" data-astro-cid-jevcpw3s> <span class="method-num" data-astro-cid-jevcpw3s>01</span> <div class="method-line-h" data-astro-cid-jevcpw3s></div> </div> <div class="method-step-content" data-astro-cid-jevcpw3s> <h3 class="method-step-title" data-astro-cid-jevcpw3s> <span data-es="Set Up y Estudio de Mercado" data-en="Tech Setup &#38; Market Research" data-astro-cid-jevcpw3s> Set Up y Estudio de Mercado </span> </h3> <p class="method-step-desc" data-astro-cid-jevcpw3s> <span data-es="Configuramos tu infraestructura digital y analizamos datos para identificar oportunidades reales en tu industria." data-en="We set up your digital infrastructure and analyze data to identify real opportunities in your industry." data-astro-cid-jevcpw3s> Configuramos tu infraestructura digital y analizamos datos para identificar oportunidades reales en tu industria. </span> </p> </div> </div> </div><div class="method-step group" data-reveal data-astro-cid-jevcpw3s> <div class="method-step-inner" data-astro-cid-jevcpw3s> <div class="method-step-left" data-astro-cid-jevcpw3s> <span class="method-num" data-astro-cid-jevcpw3s>02</span> <div class="method-line-h" data-astro-cid-jevcpw3s></div> </div> <div class="method-step-content" data-astro-cid-jevcpw3s> <h3 class="method-step-title" data-astro-cid-jevcpw3s> <span data-es="Posicionamiento y Embudos" data-en="Brand Positioning &#38; Funnels" data-astro-cid-jevcpw3s> Posicionamiento y Embudos </span> </h3> <p class="method-step-desc" data-astro-cid-jevcpw3s> <span data-es="Diseñamos una identidad sólida y validamos canales de conversión para atraer a tu audiencia ideal." data-en="We design a solid identity and validate conversion channels to attract your ideal audience." data-astro-cid-jevcpw3s> Diseñamos una identidad sólida y validamos canales de conversión para atraer a tu audiencia ideal. </span> </p> </div> </div> </div><div class="method-step group" data-reveal data-astro-cid-jevcpw3s> <div class="method-step-inner" data-astro-cid-jevcpw3s> <div class="method-step-left" data-astro-cid-jevcpw3s> <span class="method-num" data-astro-cid-jevcpw3s>03</span> <div class="method-line-h" data-astro-cid-jevcpw3s></div> </div> <div class="method-step-content" data-astro-cid-jevcpw3s> <h3 class="method-step-title" data-astro-cid-jevcpw3s> <span data-es="Automatización y Medición" data-en="Automation &#38; Measurement" data-astro-cid-jevcpw3s> Automatización y Medición </span> </h3> <p class="method-step-desc" data-astro-cid-jevcpw3s> <span data-es="Optimizamos procesos clave y leemos las métricas con rigor para tomar decisiones basadas en datos." data-en="We optimize key processes and rigorously read metrics to make data-driven decisions." data-astro-cid-jevcpw3s> Optimizamos procesos clave y leemos las métricas con rigor para tomar decisiones basadas en datos. </span> </p> </div> </div> </div><div class="method-step group" data-reveal data-astro-cid-jevcpw3s> <div class="method-step-inner" data-astro-cid-jevcpw3s> <div class="method-step-left" data-astro-cid-jevcpw3s> <span class="method-num" data-astro-cid-jevcpw3s>04</span> <div class="method-line-h" data-astro-cid-jevcpw3s></div> </div> <div class="method-step-content" data-astro-cid-jevcpw3s> <h3 class="method-step-title" data-astro-cid-jevcpw3s> <span data-es="Optimización y Escalamiento" data-en="Optimization &#38; Scaling" data-astro-cid-jevcpw3s> Optimización y Escalamiento </span> </h3> <p class="method-step-desc" data-astro-cid-jevcpw3s> <span data-es="Iteramos sobre estrategias rentables para multiplicar tu alcance y maximizar tu retorno de inversión." data-en="We iterate on profitable strategies to multiply your reach and maximize your ROI." data-astro-cid-jevcpw3s> Iteramos sobre estrategias rentables para multiplicar tu alcance y maximizar tu retorno de inversión. </span> </p> </div> </div> </div> </div> </div> </section>  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+      return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", function () {
+      gsap.from(".method-header", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        force3D: true,
+        scrollTrigger: {
+          trigger: ".method-header",
+          start: "top 85%",
+          once: true,
+        },
+      });
+
+      document.querySelectorAll(".method-step").forEach(function (step, i) {
+        gsap.from(step, {
+          x: -40,
+          opacity: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: step, start: "top 90%", once: true },
+          delay: i * 0.05,
+        });
+      });
+    });
+  });
+</script> <section id="impact" class="impact-section" data-astro-cid-obsr4q6v> <div class="impact-wrap" data-astro-cid-obsr4q6v> <div class="impact-header" data-reveal data-astro-cid-obsr4q6v> <div data-astro-cid-obsr4q6v> <p class="section-label" data-astro-cid-obsr4q6v><span data-es="Nuestro alcance" data-en="Our reach" data-astro-cid-obsr4q6v>Nuestro alcance</span></p> <h2 class="section-title" data-astro-cid-obsr4q6v><span data-es="Resultados que hablan por sí mismos." data-en="Results that speak for themselves." data-astro-cid-obsr4q6v>Resultados que hablan por sí mismos.</span></h2> </div> <p class="impact-aside" data-astro-cid-obsr4q6v> <span data-es="Estrategias digitales para marcas, instituciones y ONGs en más de 9 países." data-en="Digital strategies for brands, institutions, and NGOs across more than 9 countries." data-astro-cid-obsr4q6v>Estrategias digitales para marcas, instituciones y ONGs en más de 9 países.</span> </p> </div> <div class="impact-grid" data-astro-cid-obsr4q6v> <div class="metric-block" data-target="25" data-index="0" data-astro-cid-obsr4q6v> <div class="metric-value" data-astro-cid-obsr4q6v> <span class="metric-prefix" data-astro-cid-obsr4q6v>+</span><span class="metric-count" data-astro-cid-obsr4q6v>0</span><span class="metric-suffix" data-astro-cid-obsr4q6v></span> </div> <p class="metric-label" data-astro-cid-obsr4q6v> <span data-es="Marcas acompañadas" data-en="Brands served" data-astro-cid-obsr4q6v>Marcas acompañadas</span> </p> </div><div class="metric-block" data-target="5" data-index="1" data-astro-cid-obsr4q6v> <div class="metric-value" data-astro-cid-obsr4q6v> <span class="metric-prefix" data-astro-cid-obsr4q6v></span><span class="metric-count" data-astro-cid-obsr4q6v>0</span><span class="metric-suffix" data-astro-cid-obsr4q6v>M+</span> </div> <p class="metric-label" data-astro-cid-obsr4q6v> <span data-es="Personas alcanzadas" data-en="People reached" data-astro-cid-obsr4q6v>Personas alcanzadas</span> </p> </div><div class="metric-block" data-target="3" data-index="2" data-astro-cid-obsr4q6v> <div class="metric-value" data-astro-cid-obsr4q6v> <span class="metric-prefix" data-astro-cid-obsr4q6v>+</span><span class="metric-count" data-astro-cid-obsr4q6v>0</span><span class="metric-suffix" data-astro-cid-obsr4q6v></span> </div> <p class="metric-label" data-astro-cid-obsr4q6v> <span data-es="Proyectos internacionales" data-en="International projects" data-astro-cid-obsr4q6v>Proyectos internacionales</span> </p> </div><div class="metric-block" data-target="3" data-index="3" data-astro-cid-obsr4q6v> <div class="metric-value" data-astro-cid-obsr4q6v> <span class="metric-prefix" data-astro-cid-obsr4q6v></span><span class="metric-count" data-astro-cid-obsr4q6v>0</span><span class="metric-suffix" data-astro-cid-obsr4q6v>x</span> </div> <p class="metric-label" data-astro-cid-obsr4q6v> <span data-es="ROI promedio" data-en="Average ROI" data-astro-cid-obsr4q6v>ROI promedio</span> </p> </div> </div> </div> </section>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', function () {
+      gsap.from('.impact-header', {
+        y: 60, opacity: 0, duration: 1,
+        ease: 'power3.out', force3D: true,
+        scrollTrigger: { trigger: '.impact-header', start: 'top 85%', once: true },
+      });
+
+      document.querySelectorAll('.metric-block').forEach(function (block, i) {
+        var target = parseInt(block.getAttribute('data-target') || '0', 10);
+        var countEl = block.querySelector('.metric-count');
+        if (!countEl) return;
+
+        gsap.from(block, {
+          y: 50, opacity: 0, duration: 0.9,
+          ease: 'power3.out', force3D: true,
+          delay: i * 0.1,
+          scrollTrigger: { trigger: '.impact-grid', start: 'top 80%', once: true },
+        });
+
+        ScrollTrigger.create({
+          trigger: '.impact-grid',
+          start: 'top 80%',
+          once: true,
+          onEnter: function () {
+            gsap.to({ val: 0 }, {
+              val: target,
+              duration: 2,
+              ease: 'power2.out',
+              delay: i * 0.1,
+              onUpdate: function () {
+                countEl.textContent = Math.round(this.targets()[0].val).toString();
+              },
+            });
+          },
+        });
+      });
+    });
+
+    mm.add('(prefers-reduced-motion: reduce)', function () {
+      document.querySelectorAll('.metric-block').forEach(function (block) {
+        var target = parseInt(block.getAttribute('data-target') || '0', 10);
+        var countEl = block.querySelector('.metric-count');
+        if (countEl) countEl.textContent = target.toString();
+      });
+    });
+  });
+</script> <section class="testimonial-section" data-astro-cid-y2jewyli> <div class="testimonial-wrap" data-astro-cid-y2jewyli> <div class="testimonial-quote-mark" aria-hidden="true" data-astro-cid-y2jewyli>"</div> <blockquote class="testimonial-quote" id="testimonial-text" data-astro-cid-y2jewyli> <span data-es="Estamos muy contentos con estas estrategias porque nos han permitido crecer institucionalmente y a nivel nacional." data-en="We are very happy with these strategies because they have allowed us to grow institutionally and nationally." data-astro-cid-y2jewyli>Estamos muy contentos con estas estrategias porque nos han permitido crecer institucionalmente y a nivel nacional.</span> </blockquote> <div class="testimonial-attribution" data-astro-cid-y2jewyli> <div class="testimonial-line" data-astro-cid-y2jewyli></div> <div class="testimonial-author" data-astro-cid-y2jewyli>Ing. Iván Jácome</div> <div class="testimonial-role" data-astro-cid-y2jewyli> <span data-es="Gerente UEP Generación Alfa" data-en="Manager UEP Generación Alfa" data-astro-cid-y2jewyli>Gerente UEP Generación Alfa</span> </div> </div> </div> </section>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', function () {
+      var quote = document.getElementById('testimonial-text');
+      var attribution = document.querySelector('.testimonial-attribution');
+      var mark = document.querySelector('.testimonial-quote-mark');
+
+      if (quote) {
+        gsap.from(quote, {
+          y: 60, opacity: 0, duration: 1.2,
+          ease: 'power3.out', force3D: true,
+          scrollTrigger: { trigger: quote, start: 'top 80%', once: true },
+        });
+      }
+
+      if (attribution) {
+        gsap.to(attribution, {
+          y: 0, opacity: 1, duration: 0.8,
+          ease: 'power3.out', force3D: true, delay: 0.4,
+          scrollTrigger: { trigger: quote, start: 'top 80%', once: true },
+        });
+      }
+
+      if (mark) {
+        gsap.from(mark, {
+          scale: 0.5, opacity: 0, duration: 1,
+          ease: 'power3.out', force3D: true,
+          scrollTrigger: { trigger: quote, start: 'top 80%', once: true },
+        });
+      }
+    });
+
+    mm.add('(prefers-reduced-motion: reduce)', function () {
+      var attribution = document.querySelector('.testimonial-attribution');
+      if (attribution) {
+        attribution.style.opacity = '1';
+        attribution.style.transform = 'none';
+      }
+    });
+  });
+</script> <section class="allies-section" data-astro-cid-e2pgn3cg> <div class="allies-wrap" data-astro-cid-e2pgn3cg> <div class="allies-header" data-reveal data-astro-cid-e2pgn3cg> <p class="section-label" data-astro-cid-e2pgn3cg><span data-es="Confianza mutua" data-en="Mutual trust" data-astro-cid-e2pgn3cg>Confianza mutua</span></p> <h2 class="section-title" data-astro-cid-e2pgn3cg><span data-es="Aliados" data-en="Partners" data-astro-cid-e2pgn3cg>Aliados</span></h2> </div> <div class="allies-grid" data-astro-cid-e2pgn3cg> <div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>Las Tres Cascadas</span> </div><div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>GEVETS</span> </div><div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>AWE On The Way</span> </div><div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>Felpel</span> </div><div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>Vancouver Latin American Film Festival</span> </div><div class="ally-item" data-reveal data-astro-cid-e2pgn3cg> <span class="ally-name" data-astro-cid-e2pgn3cg>Geovi Arcos</span> </div> </div> </div> </section>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', function () {
+      gsap.from('.allies-header', {
+        y: 60, opacity: 0, duration: 1,
+        ease: 'power3.out', force3D: true,
+        scrollTrigger: { trigger: '.allies-header', start: 'top 85%', once: true },
+      });
+
+      document.querySelectorAll('.ally-item').forEach(function (item, i) {
+        gsap.from(item, {
+          y: 30, opacity: 0, duration: 0.7,
+          ease: 'power3.out', force3D: true,
+          delay: i * 0.08,
+          scrollTrigger: { trigger: '.allies-grid', start: 'top 85%', once: true },
+        });
+      });
+    });
+  });
+</script> <section class="cta-section" id="contact" data-astro-cid-ihmljexk> <div class="cta-wrap" data-astro-cid-ihmljexk> <div class="cta-label" data-astro-cid-ihmljexk> <span data-es="¿Listo para empezar?" data-en="Ready to start?" data-astro-cid-ihmljexk>¿Listo para empezar?</span> </div> <h2 class="cta-heading" id="cta-heading" data-astro-cid-ihmljexk> <span data-es="Hablemos de tu próximo gran paso." data-en="Let's talk about your next big move." data-astro-cid-ihmljexk>Hablemos de tu próximo gran paso.</span> </h2> <div class="cta-actions" data-astro-cid-ihmljexk> <a href="mailto:ceo@kinemotionec.com" class="cta-button hover-trigger" data-astro-cid-ihmljexk> <span data-es="Agendar una llamada" data-en="Book a Discovery Call" data-astro-cid-ihmljexk>Agendar una llamada</span> </a> </div> <div class="cta-contact" data-astro-cid-ihmljexk> <a href="mailto:ceo@kinemotionec.com" class="cta-link hover-trigger" data-astro-cid-ihmljexk>ceo@kinemotionec.com</a> <span class="cta-divider" data-astro-cid-ihmljexk>·</span> <a href="tel:+593963332539" class="cta-link hover-trigger" data-astro-cid-ihmljexk>+593 96 333 2539</a> </div> </div> </section>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    var mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', function () {
+      var heading = document.getElementById('cta-heading');
+      var button = document.querySelector('.cta-button');
+      var contact = document.querySelector('.cta-contact');
+      var label = document.querySelector('.cta-label');
+
+      if (label) {
+        gsap.from(label, {
+          y: 30, opacity: 0, duration: 0.8,
+          ease: 'power3.out', force3D: true,
+          scrollTrigger: { trigger: '.cta-section', start: 'top 75%', once: true },
+        });
+      }
+
+      if (heading) {
+        gsap.from(heading, {
+          y: 60, opacity: 0, duration: 1,
+          ease: 'power3.out', force3D: true, delay: 0.1,
+          scrollTrigger: { trigger: '.cta-section', start: 'top 75%', once: true },
+        });
+      }
+
+      if (button) {
+        gsap.from(button, {
+          y: 30, opacity: 0, duration: 0.8,
+          ease: 'power3.out', force3D: true, delay: 0.25,
+          scrollTrigger: { trigger: '.cta-section', start: 'top 75%', once: true },
+        });
+      }
+
+      if (contact) {
+        gsap.from(contact, {
+          opacity: 0, duration: 0.8,
+          ease: 'power2.out', delay: 0.4,
+          scrollTrigger: { trigger: '.cta-section', start: 'top 75%', once: true },
+        });
+      }
+    });
+  });
+</script>  </main> <footer class="site-footer" data-astro-cid-scinlfmn> <div class="footer-wrap" data-astro-cid-scinlfmn> <div class="footer-brand" data-astro-cid-scinlfmn> <a href="/" class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2" data-astro-cid-scinlfmn> <img src="/favicon.svg" alt="KineMotion" class="nav-logo" width="54" height="54" data-astro-cid-scinlfmn> </a> <span class="footer-copy" data-astro-cid-scinlfmn>© 2026</span> </div> </div> </footer> <!-- ── Core Libraries (CDN) ──────────────────────────────── --> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script> <!-- Lenis smooth scroll --> <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> <!-- SplitType for text splitting --> <script src="https://unpkg.com/split-type"></script> <!-- ── Global App Logic ──────────────────────────────────── --> <script>
+            window.APP = {
+                lenis: null,
+
+                init: function () {
+                    if (
+                        typeof gsap !== "undefined" &&
+                        typeof ScrollTrigger !== "undefined"
+                    ) {
+                        gsap.registerPlugin(ScrollTrigger);
+                    }
+                    if (
+                        typeof gsap !== "undefined" &&
+                        typeof CustomEase !== "undefined"
+                    ) {
+                        gsap.registerPlugin(CustomEase);
+                    }
+                    this.initSmoothScroll();
+                    this.initCursor();
+                    this.initBilingual();
+                    this.initMobileMenu();
+                },
+
+                initSmoothScroll: function () {
+                    this.lenis = new Lenis({
+                        duration: 1.4,
+                        easing: (t) =>
+                            Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        direction: "vertical",
+                        gestureDirection: "vertical",
+                        smooth: true,
+                        mouseMultiplier: 1,
+                        smoothTouch: false,
+                        touchMultiplier: 2,
+                    });
+
+                    this.lenis.on("scroll", function () {
+                        if (typeof ScrollTrigger !== "undefined") {
+                            ScrollTrigger.update();
+                        }
+                    });
+
+                    var self = this;
+                    var raf = function (time) {
+                        self.lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    };
+                    requestAnimationFrame(raf);
+                },
+
+                initCursor: function () {
+                    var cursor = document.querySelector(".cursor");
+                    if (!cursor) return;
+
+                    var xTo = gsap.quickTo(cursor, "x", {
+                        duration: 0.15,
+                        ease: "none",
+                    });
+                    var yTo = gsap.quickTo(cursor, "y", {
+                        duration: 0.15,
+                        ease: "none",
+                    });
+
+                    document.addEventListener("mousemove", function (e) {
+                        xTo(e.clientX);
+                        yTo(e.clientY);
+                    });
+
+                    var addHover = function () {
+                        cursor.classList.add("cursor-active");
+                    };
+                    var removeHover = function () {
+                        cursor.classList.remove("cursor-active");
+                    };
+
+                    window.bindCursorElements = function () {
+                        document
+                            .querySelectorAll("a, button, .hover-trigger")
+                            .forEach(function (el) {
+                                el.removeEventListener("mouseenter", addHover);
+                                el.removeEventListener(
+                                    "mouseleave",
+                                    removeHover,
+                                );
+                                el.addEventListener("mouseenter", addHover);
+                                el.addEventListener("mouseleave", removeHover);
+                            });
+                    };
+                    window.bindCursorElements();
+                },
+
+                initBilingual: function () {
+                    var langToggle = document.querySelector(".lang-toggle");
+                    if (!langToggle) return;
+
+                    var htmlTag = document.documentElement;
+
+                    var toggleLanguage = function (lang) {
+                        var elements = document.querySelectorAll("[data-es]");
+                        var isES = lang === "es";
+
+                        htmlTag.setAttribute("lang", isES ? "es" : "en");
+
+                        langToggle
+                            .querySelectorAll(".lang-opt")
+                            .forEach(function (el) {
+                                el.classList.toggle(
+                                    "active-lang",
+                                    el.dataset.lang === lang,
+                                );
+                            });
+
+                        localStorage.setItem("kinemotion_lang", lang);
+
+                        elements.forEach(function (el) {
+                            var val = isES
+                                ? el.getAttribute("data-es")
+                                : el.getAttribute("data-en");
+                            if (val) el.innerHTML = val;
+                        });
+
+                        if (window.reinitializeTypography) {
+                            setTimeout(function () {
+                                window.reinitializeTypography();
+                            }, 50);
+                        }
+                    };
+
+                    var savedLang =
+                        localStorage.getItem("kinemotion_lang") || "es";
+                    toggleLanguage(savedLang);
+
+                    langToggle.addEventListener("click", function () {
+                        var currentLang = htmlTag.getAttribute("lang");
+                        toggleLanguage(currentLang === "es" ? "en" : "es");
+                    });
+                },
+
+                initMobileMenu: function () {
+                    var hamburger = document.querySelector(".hamburger");
+                    var mobileMenu = document.querySelector(
+                        ".mobile-menu-overlay",
+                    );
+                    if (!hamburger || !mobileMenu) return;
+
+                    var toggle = function () {
+                        mobileMenu.classList.toggle("opacity-100");
+                        mobileMenu.classList.toggle("pointer-events-auto");
+                        mobileMenu.classList.toggle("opacity-0");
+                        mobileMenu.classList.toggle("pointer-events-none");
+                        hamburger.classList.toggle("active");
+                    };
+
+                    hamburger.addEventListener("click", toggle);
+                    mobileMenu.addEventListener("click", function (e) {
+                        if (e.target === mobileMenu || e.target.tagName === "A")
+                            toggle();
+                    });
+                },
+            };
+
+            window.APP.init();
+        </script> </body> </html> <script>
+	window.addEventListener("load", function () {
+		if (
+			typeof gsap === "undefined" ||
+			typeof ScrollTrigger === "undefined" ||
+			typeof SplitType === "undefined"
+		)
+			return;
+
+		/* ── Typography Split ──────────────────────────────────── */
+		window.reinitializeTypography = function () {
+			if (window.splitInstances) {
+				window.splitInstances.forEach(function (instance) {
+					instance.revert();
+				});
+			}
+			window.splitInstances = [];
+
+			var splitText = new SplitType(".split-text", {
+				types: "lines, words",
+			});
+			window.splitInstances.push(splitText);
+
+			var splitParagraphs = new SplitType(".split-text-p", {
+				types: "lines",
+			});
+			window.splitInstances.push(splitParagraphs);
+
+			/* Kill old textReveal triggers */
+			ScrollTrigger.getAll()
+				.filter(function (st) {
+					return st.vars.id === "textReveal";
+				})
+				.forEach(function (st) {
+					st.kill();
+				});
+
+			/* Headings */
+			document.querySelectorAll(".split-text").forEach(function (el) {
+				var words = el.querySelectorAll(".word");
+				if (!words.length) return;
+
+				gsap.set(words, { y: "115%" });
+				gsap.to(words, {
+					y: "0%",
+					duration: 1.2,
+					ease: "power4.out",
+					stagger: 0.02,
+					scrollTrigger: {
+						id: "textReveal",
+						trigger: el,
+						start: "top 85%",
+					},
+				});
+			});
+
+			document.querySelectorAll(".split-text-p").forEach(function (el) {
+				var lines = el.querySelectorAll(".line");
+				if (!lines.length) return;
+
+				lines.forEach(function (line) {
+					if (!line.querySelector(".line-inner")) {
+						var inner = document.createElement("div");
+						inner.classList.add("line-inner");
+						inner.innerHTML = line.innerHTML;
+						line.innerHTML = "";
+						line.appendChild(inner);
+					}
+				});
+
+				var inners = el.querySelectorAll(".line-inner");
+				gsap.set(inners, { y: "115%" });
+				gsap.to(inners, {
+					y: "0%",
+					duration: 1.2,
+					ease: "power4.out",
+					stagger: 0.05,
+					scrollTrigger: {
+						id: "textReveal",
+						trigger: el,
+						start: "top 85%",
+					},
+				});
+			});
+		};
+
+		window.reinitializeTypography();
+
+		document.querySelectorAll(".project-card").forEach(function (card) {
+			gsap.from(card, {
+				y: 100,
+				opacity: 0,
+				duration: 1.2,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: card,
+					start: "top 85%",
+				},
+			});
+		});
+	});
+</script>
